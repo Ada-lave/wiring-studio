@@ -1,0 +1,8 @@
+# Replace /ABSOLUTE/PATH/wiring-studio with the actual project directory.
+# Start the HTTP application before this bridge.
+[mcp_servers.wiring_studio_stdio]
+command = "node"
+args = ["/ABSOLUTE/PATH/wiring-studio/node_modules/tsx/dist/cli.mjs", "/ABSOLUTE/PATH/wiring-studio/server/stdio.ts"]
+
+[mcp_servers.wiring_studio_stdio.env]
+WIRING_STUDIO_URL = "http://127.0.0.1:4317/mcp"

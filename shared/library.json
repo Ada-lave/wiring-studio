@@ -1,0 +1,1433 @@
+{
+  "connector": {
+    "kind": "connector",
+    "name": "2-контактный разъём",
+    "x": 300,
+    "y": 300,
+    "w": 65,
+    "h": 56,
+    "ports": [
+      {
+        "pin": "1",
+        "label": "+5V",
+        "x": 0,
+        "y": 20,
+        "side": "left",
+        "status": "assumed",
+        "short": "1"
+      },
+      {
+        "pin": "2",
+        "label": "GND",
+        "x": 0,
+        "y": 44,
+        "side": "left",
+        "status": "assumed",
+        "short": "2"
+      }
+    ],
+    "package": "Клеммник / поляризованная кабельная пара",
+    "assumption": "Шаблон из монтажного примера. Сверьте модель, корпус и распиновку с документацией вашей детали.",
+    "assumptionLabel": "нумерация жгута",
+    "note": "J1: ≥5 А на контакт. J2–J7: ≥2 А на контакт. Штатную раскладку площадок LED не угадывать по цвету проводов.",
+    "rotation": 0,
+    "sourceUrl": ""
+  },
+  "fuse": {
+    "kind": "fuse",
+    "name": "T4A",
+    "x": 300,
+    "y": 300,
+    "w": 100,
+    "h": 42,
+    "ports": [
+      {
+        "pin": "1",
+        "label": "1",
+        "x": 0,
+        "y": 21,
+        "side": "left",
+        "status": "assumed"
+      },
+      {
+        "pin": "2",
+        "label": "2",
+        "x": 100,
+        "y": 21,
+        "side": "right",
+        "status": "assumed"
+      }
+    ],
+    "package": "5×20 мм, изолированный держатель",
+    "note": "У начала защищаемого проводника. Номинал предохранителя не является точным ограничением рабочего тока.",
+    "rotation": 0,
+    "sourceUrl": "",
+    "assumption": "Шаблон из монтажного примера. Сверьте модель, корпус и распиновку с документацией вашей детали."
+  },
+  "switch": {
+    "kind": "switch",
+    "name": "Выключатель питания",
+    "x": 300,
+    "y": 300,
+    "w": 100,
+    "h": 80,
+    "ports": [
+      {
+        "pin": "1",
+        "label": "1",
+        "x": 0,
+        "y": 55,
+        "side": "left",
+        "status": "assumed"
+      },
+      {
+        "pin": "2",
+        "label": "2",
+        "x": 100,
+        "y": 55,
+        "side": "right",
+        "status": "assumed"
+      }
+    ],
+    "package": "SPST, ≥5 А при ≥5 В DC",
+    "note": "Внешний блок 5 В / 4 А подключается к J1. Работать с проводкой только при снятом питании.",
+    "rotation": 0,
+    "sourceUrl": "",
+    "assumption": "Шаблон из монтажного примера. Сверьте модель, корпус и распиновку с документацией вашей детали."
+  },
+  "so8": {
+    "kind": "so8",
+    "name": "IRF7416 · адаптер SO8",
+    "x": 300,
+    "y": 300,
+    "w": 130,
+    "h": 115,
+    "ports": [
+      {
+        "pin": "1",
+        "label": "S",
+        "x": 0,
+        "y": 25,
+        "side": "left",
+        "status": "assumed",
+        "labelSide": "right",
+        "short": "1 S"
+      },
+      {
+        "pin": "2",
+        "label": "S",
+        "x": 0,
+        "y": 47,
+        "side": "left",
+        "status": "assumed",
+        "labelSide": "right",
+        "short": "2 S"
+      },
+      {
+        "pin": "3",
+        "label": "S",
+        "x": 0,
+        "y": 69,
+        "side": "left",
+        "status": "assumed",
+        "labelSide": "right",
+        "short": "3 S"
+      },
+      {
+        "pin": "4",
+        "label": "G",
+        "x": 0,
+        "y": 91,
+        "side": "left",
+        "status": "assumed",
+        "labelSide": "right",
+        "short": "4 G"
+      },
+      {
+        "pin": "5",
+        "label": "D",
+        "x": 130,
+        "y": 91,
+        "side": "right",
+        "status": "assumed",
+        "labelSide": "left",
+        "short": "5 D"
+      },
+      {
+        "pin": "6",
+        "label": "D",
+        "x": 130,
+        "y": 69,
+        "side": "right",
+        "status": "assumed",
+        "labelSide": "left",
+        "short": "6 D"
+      },
+      {
+        "pin": "7",
+        "label": "D",
+        "x": 130,
+        "y": 47,
+        "side": "right",
+        "status": "assumed",
+        "labelSide": "left",
+        "short": "7 D"
+      },
+      {
+        "pin": "8",
+        "label": "D",
+        "x": 130,
+        "y": 25,
+        "side": "right",
+        "status": "assumed",
+        "labelSide": "left",
+        "short": "8 D"
+      }
+    ],
+    "package": "SO8 на монтажном адаптере",
+    "orientation": "Вид сверху. Метка вывода 1 слева вверху. 1–3=S; 4=G; 5–8=D.",
+    "note": "Защита от переполюсовки: D — вход, S — нагрузка, G через R6 на GND. Адаптеру нужен теплоотвод; силовые дорожки проверить.",
+    "rotation": 0,
+    "sourceUrl": "",
+    "assumption": "Шаблон из монтажного примера. Сверьте модель, корпус и распиновку с документацией вашей детали."
+  },
+  "resistor": {
+    "kind": "resistor",
+    "name": "100 кОм",
+    "x": 300,
+    "y": 300,
+    "w": 100,
+    "h": 38,
+    "ports": [
+      {
+        "pin": "1",
+        "label": "1",
+        "x": 0,
+        "y": 19,
+        "side": "left",
+        "status": "assumed"
+      },
+      {
+        "pin": "2",
+        "label": "2",
+        "x": 100,
+        "y": 19,
+        "side": "right",
+        "status": "assumed"
+      }
+    ],
+    "package": "Axial THT, 0,25 Вт",
+    "note": "Соединять по сети из KiCad. Полярности нет.",
+    "rotation": 0,
+    "sourceUrl": "",
+    "assumption": "Шаблон из монтажного примера. Сверьте модель, корпус и распиновку с документацией вашей детали."
+  },
+  "capacitor": {
+    "kind": "capacitor",
+    "name": "1000 мкФ / 10 В",
+    "x": 300,
+    "y": 300,
+    "w": 70,
+    "h": 100,
+    "ports": [
+      {
+        "pin": "1",
+        "label": "+",
+        "x": 20,
+        "y": 100,
+        "side": "bottom",
+        "status": "assumed"
+      },
+      {
+        "pin": "2",
+        "label": "−",
+        "x": 50,
+        "y": 100,
+        "side": "bottom",
+        "status": "assumed"
+      }
+    ],
+    "package": "Радиальный электролит, не менее 10 В",
+    "note": "1 — положительный вывод, 2 — отрицательный. Полоса на корпусе обозначает минус. Рисунок корпуса условный; маркировку проверить.",
+    "rotation": 0,
+    "sourceUrl": "",
+    "assumption": "Шаблон из монтажного примера. Сверьте модель, корпус и распиновку с документацией вашей детали."
+  },
+  "esp32": {
+    "kind": "esp32",
+    "name": "ESP32 DevKitC V4",
+    "x": 300,
+    "y": 300,
+    "w": 220,
+    "h": 460,
+    "ports": [
+      {
+        "pin": "J2.1",
+        "label": "3V3",
+        "x": 8,
+        "y": 24,
+        "side": "left",
+        "status": "assumed"
+      },
+      {
+        "pin": "J2.2",
+        "label": "EN",
+        "x": 8,
+        "y": 46,
+        "side": "left",
+        "status": "assumed"
+      },
+      {
+        "pin": "J2.3",
+        "label": "VP / GPIO36",
+        "x": 8,
+        "y": 68,
+        "side": "left",
+        "status": "assumed"
+      },
+      {
+        "pin": "J2.4",
+        "label": "VN / GPIO39",
+        "x": 8,
+        "y": 90,
+        "side": "left",
+        "status": "assumed"
+      },
+      {
+        "pin": "J2.5",
+        "label": "GPIO34",
+        "x": 8,
+        "y": 112,
+        "side": "left",
+        "status": "assumed"
+      },
+      {
+        "pin": "J2.6",
+        "label": "GPIO35",
+        "x": 8,
+        "y": 134,
+        "side": "left",
+        "status": "assumed"
+      },
+      {
+        "pin": "J2.7",
+        "label": "GPIO32",
+        "x": 8,
+        "y": 156,
+        "side": "left",
+        "status": "assumed"
+      },
+      {
+        "pin": "J2.8",
+        "label": "GPIO33",
+        "x": 8,
+        "y": 178,
+        "side": "left",
+        "status": "assumed"
+      },
+      {
+        "pin": "J2.9",
+        "label": "GPIO25",
+        "x": 8,
+        "y": 200,
+        "side": "left",
+        "status": "assumed"
+      },
+      {
+        "pin": "J2.10",
+        "label": "GPIO26",
+        "x": 8,
+        "y": 222,
+        "side": "left",
+        "status": "assumed"
+      },
+      {
+        "pin": "J2.11",
+        "label": "GPIO27",
+        "x": 8,
+        "y": 244,
+        "side": "left",
+        "status": "assumed"
+      },
+      {
+        "pin": "J2.12",
+        "label": "GPIO14",
+        "x": 8,
+        "y": 266,
+        "side": "left",
+        "status": "assumed"
+      },
+      {
+        "pin": "J2.13",
+        "label": "GPIO12",
+        "x": 8,
+        "y": 288,
+        "side": "left",
+        "status": "assumed"
+      },
+      {
+        "pin": "J2.14",
+        "label": "GND",
+        "x": 8,
+        "y": 310,
+        "side": "left",
+        "status": "assumed"
+      },
+      {
+        "pin": "J2.15",
+        "label": "GPIO13",
+        "x": 8,
+        "y": 332,
+        "side": "left",
+        "status": "assumed"
+      },
+      {
+        "pin": "J2.16",
+        "label": "D2 / GPIO9",
+        "x": 8,
+        "y": 354,
+        "side": "left",
+        "status": "assumed"
+      },
+      {
+        "pin": "J2.17",
+        "label": "D3 / GPIO10",
+        "x": 8,
+        "y": 376,
+        "side": "left",
+        "status": "assumed"
+      },
+      {
+        "pin": "J2.18",
+        "label": "CMD / GPIO11",
+        "x": 8,
+        "y": 398,
+        "side": "left",
+        "status": "assumed"
+      },
+      {
+        "pin": "J2.19",
+        "label": "5V",
+        "x": 8,
+        "y": 420,
+        "side": "left",
+        "status": "assumed"
+      },
+      {
+        "pin": "J3.1",
+        "label": "GND",
+        "x": 212,
+        "y": 24,
+        "side": "right",
+        "status": "assumed"
+      },
+      {
+        "pin": "J3.2",
+        "label": "GPIO23",
+        "x": 212,
+        "y": 46,
+        "side": "right",
+        "status": "assumed"
+      },
+      {
+        "pin": "J3.3",
+        "label": "GPIO22",
+        "x": 212,
+        "y": 68,
+        "side": "right",
+        "status": "assumed"
+      },
+      {
+        "pin": "J3.4",
+        "label": "TX / GPIO1",
+        "x": 212,
+        "y": 90,
+        "side": "right",
+        "status": "assumed"
+      },
+      {
+        "pin": "J3.5",
+        "label": "RX / GPIO3",
+        "x": 212,
+        "y": 112,
+        "side": "right",
+        "status": "assumed"
+      },
+      {
+        "pin": "J3.6",
+        "label": "GPIO21",
+        "x": 212,
+        "y": 134,
+        "side": "right",
+        "status": "assumed"
+      },
+      {
+        "pin": "J3.7",
+        "label": "GND",
+        "x": 212,
+        "y": 156,
+        "side": "right",
+        "status": "assumed"
+      },
+      {
+        "pin": "J3.8",
+        "label": "GPIO19",
+        "x": 212,
+        "y": 178,
+        "side": "right",
+        "status": "assumed"
+      },
+      {
+        "pin": "J3.9",
+        "label": "GPIO18",
+        "x": 212,
+        "y": 200,
+        "side": "right",
+        "status": "assumed"
+      },
+      {
+        "pin": "J3.10",
+        "label": "GPIO5",
+        "x": 212,
+        "y": 222,
+        "side": "right",
+        "status": "assumed"
+      },
+      {
+        "pin": "J3.11",
+        "label": "GPIO17",
+        "x": 212,
+        "y": 244,
+        "side": "right",
+        "status": "assumed"
+      },
+      {
+        "pin": "J3.12",
+        "label": "GPIO16",
+        "x": 212,
+        "y": 266,
+        "side": "right",
+        "status": "assumed"
+      },
+      {
+        "pin": "J3.13",
+        "label": "GPIO4",
+        "x": 212,
+        "y": 288,
+        "side": "right",
+        "status": "assumed"
+      },
+      {
+        "pin": "J3.14",
+        "label": "GPIO0",
+        "x": 212,
+        "y": 310,
+        "side": "right",
+        "status": "assumed"
+      },
+      {
+        "pin": "J3.15",
+        "label": "GPIO2",
+        "x": 212,
+        "y": 332,
+        "side": "right",
+        "status": "assumed"
+      },
+      {
+        "pin": "J3.16",
+        "label": "GPIO15",
+        "x": 212,
+        "y": 354,
+        "side": "right",
+        "status": "assumed"
+      },
+      {
+        "pin": "J3.17",
+        "label": "D1 / GPIO8",
+        "x": 212,
+        "y": 376,
+        "side": "right",
+        "status": "assumed"
+      },
+      {
+        "pin": "J3.18",
+        "label": "D0 / GPIO7",
+        "x": 212,
+        "y": 398,
+        "side": "right",
+        "status": "assumed"
+      },
+      {
+        "pin": "J3.19",
+        "label": "CLK / GPIO6",
+        "x": 212,
+        "y": 420,
+        "side": "right",
+        "status": "assumed"
+      }
+    ],
+    "package": "Готовая плата / WROOM-32E",
+    "assumption": "Принята ESP32-DevKitC V4 с ESP32-WROOM-32E; подтвердите точную модель вашей платы. Вид сверху, USB снизу.",
+    "assumptionLabel": "принята плата DevKitC V4",
+    "note": "ESP32-DevKitC V4 / WROOM-32E: 38 контактов по таблицам Espressif. D0/D1/D2/D3/CMD/CLK заняты SPI flash; GPIO16/17 доступны у WROOM, у WROVER зарезервированы. Только один источник питания: USB, 5V или 3V3.",
+    "rotation": 0,
+    "sourceUrl": "https://documentation.espressif.com/esp-dev-kits/en/latest/esp32/esp32-devkitc/user_guide.html"
+  },
+  "dip": {
+    "kind": "dip",
+    "name": "SN74AHCT125N",
+    "x": 300,
+    "y": 300,
+    "w": 140,
+    "h": 215,
+    "ports": [
+      {
+        "pin": "1",
+        "label": "/1OE",
+        "x": 0,
+        "y": 24,
+        "side": "left",
+        "status": "assumed",
+        "short": "1 /1OE",
+        "labelSide": "right"
+      },
+      {
+        "pin": "2",
+        "label": "1A",
+        "x": 0,
+        "y": 51,
+        "side": "left",
+        "status": "assumed",
+        "short": "2 1A",
+        "labelSide": "right"
+      },
+      {
+        "pin": "3",
+        "label": "1Y",
+        "x": 0,
+        "y": 78,
+        "side": "left",
+        "status": "assumed",
+        "short": "3 1Y",
+        "labelSide": "right"
+      },
+      {
+        "pin": "4",
+        "label": "/2OE",
+        "x": 0,
+        "y": 105,
+        "side": "left",
+        "status": "assumed",
+        "short": "4 /2OE",
+        "labelSide": "right"
+      },
+      {
+        "pin": "5",
+        "label": "2A",
+        "x": 0,
+        "y": 132,
+        "side": "left",
+        "status": "assumed",
+        "short": "5 2A",
+        "labelSide": "right"
+      },
+      {
+        "pin": "6",
+        "label": "2Y",
+        "x": 0,
+        "y": 159,
+        "side": "left",
+        "status": "assumed",
+        "short": "6 2Y",
+        "labelSide": "right"
+      },
+      {
+        "pin": "7",
+        "label": "GND",
+        "x": 0,
+        "y": 186,
+        "side": "left",
+        "status": "assumed",
+        "short": "7 GND",
+        "labelSide": "right"
+      },
+      {
+        "pin": "14",
+        "label": "VCC",
+        "x": 140,
+        "y": 24,
+        "side": "right",
+        "status": "assumed",
+        "short": "14 VCC",
+        "labelSide": "left"
+      },
+      {
+        "pin": "13",
+        "label": "/4OE",
+        "x": 140,
+        "y": 51,
+        "side": "right",
+        "status": "assumed",
+        "short": "13 /4OE",
+        "labelSide": "left"
+      },
+      {
+        "pin": "12",
+        "label": "4A",
+        "x": 140,
+        "y": 78,
+        "side": "right",
+        "status": "assumed",
+        "short": "12 4A",
+        "labelSide": "left"
+      },
+      {
+        "pin": "11",
+        "label": "4Y",
+        "x": 140,
+        "y": 105,
+        "side": "right",
+        "status": "assumed",
+        "short": "11 4Y",
+        "labelSide": "left"
+      },
+      {
+        "pin": "10",
+        "label": "/3OE",
+        "x": 140,
+        "y": 132,
+        "side": "right",
+        "status": "assumed",
+        "short": "10 /3OE",
+        "labelSide": "left"
+      },
+      {
+        "pin": "9",
+        "label": "3A",
+        "x": 140,
+        "y": 159,
+        "side": "right",
+        "status": "assumed",
+        "short": "9 3A",
+        "labelSide": "left"
+      },
+      {
+        "pin": "8",
+        "label": "3Y",
+        "x": 140,
+        "y": 186,
+        "side": "right",
+        "status": "assumed",
+        "short": "8 3Y",
+        "labelSide": "left"
+      }
+    ],
+    "package": "PDIP-14, панелька 2,54 мм / 7,62 мм",
+    "orientation": "Вид сверху. Выемка сверху, вывод 1 слева вверху. Не зеркалить для пайки.",
+    "note": "Питание 14/7: 4,5–5,5 В. GPIO18 → 2; 3 → R1. Неиспользуемые выходы 6/8/11 — NC. Использовать именно AHCT, не HC и не LS.",
+    "rotation": 0,
+    "sourceUrl": "",
+    "assumption": "Шаблон из монтажного примера. Сверьте модель, корпус и распиновку с документацией вашей детали."
+  },
+  "ceramic": {
+    "kind": "ceramic",
+    "name": "100 нФ",
+    "x": 300,
+    "y": 300,
+    "w": 60,
+    "h": 60,
+    "ports": [
+      {
+        "pin": "1",
+        "label": "1",
+        "x": 16,
+        "y": 60,
+        "side": "bottom",
+        "status": "assumed"
+      },
+      {
+        "pin": "2",
+        "label": "2",
+        "x": 44,
+        "y": 60,
+        "side": "bottom",
+        "status": "assumed"
+      }
+    ],
+    "package": "Керамический THT",
+    "note": "Неполярный. C1 размещать вплотную к выводам 14 и 7 U1.",
+    "rotation": 0,
+    "sourceUrl": "",
+    "assumption": "Шаблон из монтажного примера. Сверьте модель, корпус и распиновку с документацией вашей детали."
+  },
+  "matrix": {
+    "kind": "matrix",
+    "name": "Матрица 1 · WS2812B",
+    "x": 300,
+    "y": 300,
+    "w": 180,
+    "h": 190,
+    "ports": [
+      {
+        "pin": "V+",
+        "label": "+5V",
+        "x": 25,
+        "y": 184,
+        "side": "bottom",
+        "status": "assumed",
+        "short": "+5?"
+      },
+      {
+        "pin": "GND",
+        "label": "GND",
+        "x": 68,
+        "y": 184,
+        "side": "bottom",
+        "status": "assumed",
+        "short": "GND?"
+      },
+      {
+        "pin": "DIN",
+        "label": "DIN",
+        "x": 111,
+        "y": 184,
+        "side": "bottom",
+        "status": "assumed",
+        "short": "DIN?"
+      },
+      {
+        "pin": "DOUT",
+        "label": "DOUT",
+        "x": 154,
+        "y": 184,
+        "side": "bottom",
+        "status": "assumed",
+        "short": "OUT?"
+      }
+    ],
+    "package": "Готовый модуль 8×8 / 64 LED",
+    "assumption": "Шаблон из монтажного примера. Сверьте модель, корпус и распиновку с документацией вашей детали.",
+    "assumptionLabel": "площадки условные",
+    "note": "Рабочий бюджет ≤0,60 А. Питание отдельной парой от распределителя. Конденсатор рядом с модулем.",
+    "rotation": 0,
+    "sourceUrl": ""
+  },
+  "strip": {
+    "kind": "strip",
+    "name": "Лента WS2812B · 60 LED",
+    "x": 300,
+    "y": 300,
+    "w": 520,
+    "h": 75,
+    "ports": [
+      {
+        "pin": "V+",
+        "label": "+5V",
+        "x": 8,
+        "y": 12,
+        "side": "left",
+        "status": "assumed",
+        "short": "+5?"
+      },
+      {
+        "pin": "GND",
+        "label": "GND",
+        "x": 8,
+        "y": 38,
+        "side": "left",
+        "status": "assumed",
+        "short": "GND?"
+      },
+      {
+        "pin": "DIN",
+        "label": "DIN",
+        "x": 8,
+        "y": 64,
+        "side": "left",
+        "status": "assumed",
+        "short": "DIN?"
+      },
+      {
+        "pin": "DOUT",
+        "label": "DOUT",
+        "x": 512,
+        "y": 38,
+        "side": "right",
+        "status": "assumed",
+        "short": "OUT?"
+      }
+    ],
+    "package": "Готовая лента 5 В / 60 LED",
+    "assumption": "Шаблон из монтажного примера. Сверьте модель, корпус и распиновку с документацией вашей детали.",
+    "assumptionLabel": "площадки и размеры условные",
+    "note": "Бюджет ≤0,60 А. DOUT5 оставлен запасным на J7.4; изолировать. Рисунок показывает фрагмент, а не все 60 LED.",
+    "rotation": 0,
+    "sourceUrl": ""
+  },
+  "custom": {
+    "kind": "custom",
+    "name": "Произвольный модуль",
+    "x": 300,
+    "y": 300,
+    "w": 160,
+    "h": 100,
+    "rotation": 0,
+    "ports": [
+      {
+        "pin": "1",
+        "label": "1",
+        "x": 0,
+        "y": 30,
+        "side": "left",
+        "status": "assumed"
+      },
+      {
+        "pin": "2",
+        "label": "2",
+        "x": 160,
+        "y": 30,
+        "side": "right",
+        "status": "assumed"
+      }
+    ],
+    "package": "",
+    "note": "Контакты редактируются в свойствах или через MCP",
+    "assumption": "Корпус и площадки условные; задайте контакты и документацию."
+  },
+  "diode": {
+    "kind": "diode",
+    "name": "Диод",
+    "x": 300,
+    "y": 300,
+    "w": 100,
+    "h": 70,
+    "rotation": 0,
+    "ports": [
+      {
+        "pin": "A",
+        "label": "A",
+        "x": 0,
+        "y": 50,
+        "side": "left",
+        "status": "assumed"
+      },
+      {
+        "pin": "K",
+        "label": "K",
+        "x": 100,
+        "y": 50,
+        "side": "right",
+        "status": "assumed"
+      }
+    ],
+    "package": "Условный двухвыводный корпус",
+    "note": "A — анод, K — катод. Маркировку и полярность конкретной детали проверить.",
+    "sourceUrl": "",
+    "assumption": "Универсальный шаблон. Корпус и физические позиции условные; сверьте конкретную деталь с документацией.",
+    "assumptionLabel": "условный корпус и контакты"
+  },
+  "led": {
+    "kind": "led",
+    "name": "Светодиод",
+    "x": 300,
+    "y": 300,
+    "w": 100,
+    "h": 70,
+    "rotation": 0,
+    "ports": [
+      {
+        "pin": "A",
+        "label": "A",
+        "x": 0,
+        "y": 50,
+        "side": "left",
+        "status": "assumed"
+      },
+      {
+        "pin": "K",
+        "label": "K",
+        "x": 100,
+        "y": 50,
+        "side": "right",
+        "status": "assumed"
+      }
+    ],
+    "package": "Условный двухвыводный корпус",
+    "note": "A — анод, K — катод. Маркировку и полярность конкретной детали проверить. Требуется внешний токоограничивающий резистор.",
+    "sourceUrl": "",
+    "assumption": "Универсальный шаблон. Корпус и физические позиции условные; сверьте конкретную деталь с документацией.",
+    "assumptionLabel": "условный корпус и контакты"
+  },
+  "npn": {
+    "kind": "npn",
+    "name": "NPN-транзистор",
+    "x": 300,
+    "y": 300,
+    "w": 120,
+    "h": 110,
+    "rotation": 0,
+    "ports": [
+      {
+        "pin": "B",
+        "label": "B",
+        "x": 0,
+        "y": 55,
+        "side": "left",
+        "status": "assumed"
+      },
+      {
+        "pin": "C",
+        "label": "C",
+        "x": 120,
+        "y": 25,
+        "side": "right",
+        "status": "assumed"
+      },
+      {
+        "pin": "E",
+        "label": "E",
+        "x": 120,
+        "y": 85,
+        "side": "right",
+        "status": "assumed"
+      }
+    ],
+    "package": "Условный трёхвыводный корпус",
+    "note": "Буквы обозначают функции контактов, а не номера ножек. Числовую распиновку и допустимые режимы уточните по документации.",
+    "sourceUrl": "",
+    "assumption": "Универсальный шаблон. Корпус и физические позиции условные; сверьте конкретную деталь с документацией.",
+    "assumptionLabel": "условный корпус и контакты"
+  },
+  "pnp": {
+    "kind": "pnp",
+    "name": "PNP-транзистор",
+    "x": 300,
+    "y": 300,
+    "w": 120,
+    "h": 110,
+    "rotation": 0,
+    "ports": [
+      {
+        "pin": "B",
+        "label": "B",
+        "x": 0,
+        "y": 55,
+        "side": "left",
+        "status": "assumed"
+      },
+      {
+        "pin": "C",
+        "label": "C",
+        "x": 120,
+        "y": 25,
+        "side": "right",
+        "status": "assumed"
+      },
+      {
+        "pin": "E",
+        "label": "E",
+        "x": 120,
+        "y": 85,
+        "side": "right",
+        "status": "assumed"
+      }
+    ],
+    "package": "Условный трёхвыводный корпус",
+    "note": "Буквы обозначают функции контактов, а не номера ножек. Числовую распиновку и допустимые режимы уточните по документации.",
+    "sourceUrl": "",
+    "assumption": "Универсальный шаблон. Корпус и физические позиции условные; сверьте конкретную деталь с документацией.",
+    "assumptionLabel": "условный корпус и контакты"
+  },
+  "nmos": {
+    "kind": "nmos",
+    "name": "N-MOSFET",
+    "x": 300,
+    "y": 300,
+    "w": 120,
+    "h": 110,
+    "rotation": 0,
+    "ports": [
+      {
+        "pin": "G",
+        "label": "G",
+        "x": 0,
+        "y": 55,
+        "side": "left",
+        "status": "assumed"
+      },
+      {
+        "pin": "D",
+        "label": "D",
+        "x": 120,
+        "y": 25,
+        "side": "right",
+        "status": "assumed"
+      },
+      {
+        "pin": "S",
+        "label": "S",
+        "x": 120,
+        "y": 85,
+        "side": "right",
+        "status": "assumed"
+      }
+    ],
+    "package": "Условный трёхвыводный корпус",
+    "note": "Буквы обозначают функции контактов, а не номера ножек. Числовую распиновку и допустимые режимы уточните по документации.",
+    "sourceUrl": "",
+    "assumption": "Универсальный шаблон. Корпус и физические позиции условные; сверьте конкретную деталь с документацией.",
+    "assumptionLabel": "условный корпус и контакты"
+  },
+  "pmos": {
+    "kind": "pmos",
+    "name": "P-MOSFET",
+    "x": 300,
+    "y": 300,
+    "w": 120,
+    "h": 110,
+    "rotation": 0,
+    "ports": [
+      {
+        "pin": "G",
+        "label": "G",
+        "x": 0,
+        "y": 55,
+        "side": "left",
+        "status": "assumed"
+      },
+      {
+        "pin": "D",
+        "label": "D",
+        "x": 120,
+        "y": 25,
+        "side": "right",
+        "status": "assumed"
+      },
+      {
+        "pin": "S",
+        "label": "S",
+        "x": 120,
+        "y": 85,
+        "side": "right",
+        "status": "assumed"
+      }
+    ],
+    "package": "Условный трёхвыводный корпус",
+    "note": "Буквы обозначают функции контактов, а не номера ножек. Числовую распиновку и допустимые режимы уточните по документации.",
+    "sourceUrl": "",
+    "assumption": "Универсальный шаблон. Корпус и физические позиции условные; сверьте конкретную деталь с документацией.",
+    "assumptionLabel": "условный корпус и контакты"
+  },
+  "button": {
+    "kind": "button",
+    "name": "Кнопка без фиксации",
+    "x": 300,
+    "y": 300,
+    "w": 100,
+    "h": 80,
+    "rotation": 0,
+    "ports": [
+      {
+        "pin": "1",
+        "label": "1",
+        "x": 0,
+        "y": 60,
+        "side": "left",
+        "status": "assumed"
+      },
+      {
+        "pin": "2",
+        "label": "2",
+        "x": 100,
+        "y": 60,
+        "side": "right",
+        "status": "assumed"
+      }
+    ],
+    "package": "SPST-NO, два электрических контакта",
+    "note": "Нормально разомкнута. Четырёхножечные кнопки могут иметь попарно соединённые ножки; проверьте конкретную деталь.",
+    "sourceUrl": "",
+    "assumption": "Универсальный шаблон. Корпус и физические позиции условные; сверьте конкретную деталь с документацией.",
+    "assumptionLabel": "условный корпус и контакты"
+  },
+  "potentiometer": {
+    "kind": "potentiometer",
+    "name": "Потенциометр",
+    "x": 300,
+    "y": 300,
+    "w": 120,
+    "h": 100,
+    "rotation": 0,
+    "ports": [
+      {
+        "pin": "1",
+        "label": "1",
+        "x": 0,
+        "y": 70,
+        "side": "left",
+        "status": "assumed"
+      },
+      {
+        "pin": "W",
+        "label": "W",
+        "x": 60,
+        "y": 100,
+        "side": "bottom",
+        "status": "assumed"
+      },
+      {
+        "pin": "3",
+        "label": "3",
+        "x": 120,
+        "y": 70,
+        "side": "right",
+        "status": "assumed"
+      }
+    ],
+    "package": "Условный потенциометр",
+    "note": "1 и 3 — концы резистивной дорожки, W — движок. Порядок ножек и направление регулировки проверить.",
+    "sourceUrl": "",
+    "assumption": "Универсальный шаблон. Корпус и физические позиции условные; сверьте конкретную деталь с документацией.",
+    "assumptionLabel": "условный корпус и контакты"
+  },
+  "inductor": {
+    "kind": "inductor",
+    "name": "Катушка индуктивности",
+    "x": 300,
+    "y": 300,
+    "w": 110,
+    "h": 60,
+    "rotation": 0,
+    "ports": [
+      {
+        "pin": "1",
+        "label": "1",
+        "x": 0,
+        "y": 40,
+        "side": "left",
+        "status": "assumed"
+      },
+      {
+        "pin": "2",
+        "label": "2",
+        "x": 110,
+        "y": 40,
+        "side": "right",
+        "status": "assumed"
+      }
+    ],
+    "package": "Условная двухвыводная катушка",
+    "note": "Номинал, допустимый ток и сопротивление задаются для выбранной детали.",
+    "sourceUrl": "",
+    "assumption": "Универсальный шаблон. Корпус и физические позиции условные; сверьте конкретную деталь с документацией.",
+    "assumptionLabel": "условный корпус и контакты"
+  },
+  "relay": {
+    "kind": "relay",
+    "name": "Реле SPDT",
+    "x": 300,
+    "y": 300,
+    "w": 180,
+    "h": 140,
+    "rotation": 0,
+    "ports": [
+      {
+        "pin": "A1",
+        "label": "A1",
+        "x": 0,
+        "y": 35,
+        "side": "left",
+        "status": "assumed"
+      },
+      {
+        "pin": "A2",
+        "label": "A2",
+        "x": 0,
+        "y": 105,
+        "side": "left",
+        "status": "assumed"
+      },
+      {
+        "pin": "NC",
+        "label": "NC",
+        "x": 180,
+        "y": 30,
+        "side": "right",
+        "status": "assumed"
+      },
+      {
+        "pin": "COM",
+        "label": "COM",
+        "x": 180,
+        "y": 70,
+        "side": "right",
+        "status": "assumed"
+      },
+      {
+        "pin": "NO",
+        "label": "NO",
+        "x": 180,
+        "y": 110,
+        "side": "right",
+        "status": "assumed"
+      }
+    ],
+    "package": "Катушка и одна переключающая группа",
+    "note": "A1/A2 — катушка; COM — общий, NC — нормально замкнутый, NO — нормально разомкнутый контакт при обесточенной катушке. NC здесь не означает статус «не подключать». Полярность катушки со встроенным диодом и защиту драйвера проверить.",
+    "sourceUrl": "",
+    "assumption": "Универсальный шаблон. Корпус и физические позиции условные; сверьте конкретную деталь с документацией.",
+    "assumptionLabel": "условный корпус и контакты"
+  },
+  "battery": {
+    "kind": "battery",
+    "name": "Батарея",
+    "x": 300,
+    "y": 300,
+    "w": 110,
+    "h": 90,
+    "rotation": 0,
+    "ports": [
+      {
+        "pin": "+",
+        "label": "+",
+        "x": 0,
+        "y": 55,
+        "side": "left",
+        "status": "assumed"
+      },
+      {
+        "pin": "−",
+        "label": "−",
+        "x": 110,
+        "y": 55,
+        "side": "right",
+        "status": "assumed"
+      }
+    ],
+    "package": "Условная батарея / держатель",
+    "note": "Проверьте полярность, напряжение и допустимый ток выбранного источника.",
+    "sourceUrl": "",
+    "assumption": "Универсальный шаблон. Корпус и физические позиции условные; сверьте конкретную деталь с документацией.",
+    "assumptionLabel": "условный корпус и контакты"
+  },
+  "motor": {
+    "kind": "motor",
+    "name": "Двигатель DC",
+    "x": 300,
+    "y": 300,
+    "w": 120,
+    "h": 100,
+    "rotation": 0,
+    "ports": [
+      {
+        "pin": "1",
+        "label": "1",
+        "x": 0,
+        "y": 70,
+        "side": "left",
+        "status": "assumed"
+      },
+      {
+        "pin": "2",
+        "label": "2",
+        "x": 120,
+        "y": 70,
+        "side": "right",
+        "status": "assumed"
+      }
+    ],
+    "package": "Двухпроводный двигатель DC",
+    "note": "Направление вращения зависит от полярности. Проверьте пусковой ток и защиту драйвера от выбросов напряжения.",
+    "sourceUrl": "",
+    "assumption": "Универсальный шаблон. Корпус и физические позиции условные; сверьте конкретную деталь с документацией.",
+    "assumptionLabel": "условный корпус и контакты"
+  },
+  "connector3": {
+    "kind": "connector",
+    "name": "3-контактный разъём",
+    "x": 300,
+    "y": 300,
+    "w": 75,
+    "h": 100,
+    "rotation": 0,
+    "ports": [
+      {
+        "pin": "1",
+        "label": "1",
+        "x": 0,
+        "y": 20,
+        "side": "left",
+        "status": "assumed"
+      },
+      {
+        "pin": "2",
+        "label": "2",
+        "x": 0,
+        "y": 48,
+        "side": "left",
+        "status": "assumed"
+      },
+      {
+        "pin": "3",
+        "label": "3",
+        "x": 0,
+        "y": 76,
+        "side": "left",
+        "status": "assumed"
+      }
+    ],
+    "package": "Условный разъём на 3 контакта",
+    "note": "Номера условные; назначение контактов и вид со стороны подключения проверить.",
+    "sourceUrl": "",
+    "assumption": "Универсальный шаблон. Корпус и физические позиции условные; сверьте конкретную деталь с документацией.",
+    "assumptionLabel": "условный корпус и контакты"
+  },
+  "connector4": {
+    "kind": "connector",
+    "name": "4-контактный разъём",
+    "x": 300,
+    "y": 300,
+    "w": 75,
+    "h": 128,
+    "rotation": 0,
+    "ports": [
+      {
+        "pin": "1",
+        "label": "1",
+        "x": 0,
+        "y": 20,
+        "side": "left",
+        "status": "assumed"
+      },
+      {
+        "pin": "2",
+        "label": "2",
+        "x": 0,
+        "y": 48,
+        "side": "left",
+        "status": "assumed"
+      },
+      {
+        "pin": "3",
+        "label": "3",
+        "x": 0,
+        "y": 76,
+        "side": "left",
+        "status": "assumed"
+      },
+      {
+        "pin": "4",
+        "label": "4",
+        "x": 0,
+        "y": 104,
+        "side": "left",
+        "status": "assumed"
+      }
+    ],
+    "package": "Условный разъём на 4 контакта",
+    "note": "Номера условные; назначение контактов и вид со стороны подключения проверить.",
+    "sourceUrl": "",
+    "assumption": "Универсальный шаблон. Корпус и физические позиции условные; сверьте конкретную деталь с документацией.",
+    "assumptionLabel": "условный корпус и контакты"
+  }
+}

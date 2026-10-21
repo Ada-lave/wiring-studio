@@ -1,0 +1,65 @@
+{
+  "verifiedAt": "2026-10-21T11:55:45.463Z",
+  "runtime": {
+    "node": "v26.7.0",
+    "os": "linux",
+    "execution": "Native Node.js, Chromium; no Docker",
+    "dependencies": {
+      "svelte": "5.57.2",
+      "vite": "7.3.7",
+      "typescript": "5.9.3",
+      "@modelcontextprotocol/sdk": "1.32.1",
+      "playwright": "1.64.1",
+      "express": "5.3.0"
+    }
+  },
+  "checks": {
+    "typecheck": "0 errors, 0 warnings",
+    "build": "passed",
+    "automatedTests": {
+      "passed": 8,
+      "failed": 0
+    },
+    "browser": {
+      "passed": true,
+      "scenarios": [
+        "ESP32: 38 components,116 pins,24 nets,3 NC,no routing warnings",
+        "wire layers",
+        "search, focus and DIP closeup",
+        "zoom and camera restore after reload",
+        "new project and component creation from UI",
+        "MCP edits immediately visible in browser via SSE",
+        "UI wiring immediately visible through real MCP client",
+        "pointer dragging persists coordinates and preserves connections",
+        "UI undo/redo",
+        "rotation keeps pin identity and electrical nets",
+        "390px layout, canvas and library drawer",
+        "standalone export runs offline with rotated components",
+        "saved project survives browser reload"
+      ]
+    },
+    "pdf": {
+      "pageSize": "A2 landscape 594 × 420 mm",
+      "pages": 1,
+      "visuallyInspected": true
+    },
+    "mcp": {
+      "streamableHttp": "passed with official SDK client",
+      "stdio": "passed with official SDK client",
+      "sharedStore": true
+    },
+    "sample": {
+      "components": 38,
+      "pins": 116,
+      "nets": 24,
+      "nc": 3,
+      "allNetPinsMatchedXml": true
+    }
+  },
+  "limitations": [
+    "Local single-user application; start one backend per project directory.",
+    "Independent electrical model: no reverse synchronization to KiCad, no PCB, no simulation or ERC of local edits.",
+    "Unknown physical pin positions remain conditional. Firmware LED current limiting is required for the supplied ESP32 example.",
+    "MCP connection examples are provided; global Codex settings were not changed."
+  ]
+}

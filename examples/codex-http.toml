@@ -1,0 +1,3 @@
+# Merge this table into the Codex configuration; start Wiring Studio first.
+[mcp_servers.wiring_studio]
+url = "http://127.0.0.1:4317/mcp"

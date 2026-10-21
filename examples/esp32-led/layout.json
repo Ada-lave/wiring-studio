@@ -1,0 +1,1596 @@
+{
+  "version": 1,
+  "title": "ESP32 + 316 LED · монтажная карта",
+  "subtitle": "5 В / 4 А · 4 матрицы 8×8 + лента 60 LED · питание параллельно, данные последовательно",
+  "width": 1800,
+  "height": 1680,
+  "components": {
+    "J1": {
+      "kind": "connector",
+      "name": "2-контактный разъём",
+      "x": 80,
+      "y": 170,
+      "w": 65,
+      "h": 56,
+      "ports": [
+        {
+          "pin": "1",
+          "label": "+5V",
+          "x": 0,
+          "y": 20,
+          "side": "left",
+          "status": "assumed",
+          "short": "1"
+        },
+        {
+          "pin": "2",
+          "label": "GND",
+          "x": 0,
+          "y": 44,
+          "side": "left",
+          "status": "assumed",
+          "short": "2"
+        }
+      ],
+      "package": "Клеммник / поляризованная кабельная пара",
+      "assumption": "Нумерация нашего жгута. Физический порядок выбранного разъёма и вид с сопрягаемой стороны проверить по чертежу и прозвонкой.",
+      "assumptionLabel": "нумерация жгута",
+      "note": "J1: ≥5 А на контакт. J2–J7: ≥2 А на контакт. Штатную раскладку площадок LED не угадывать по цвету проводов.",
+      "caption": "J1 · БП 5V / 4A"
+    },
+    "F1": {
+      "kind": "fuse",
+      "name": "T4A",
+      "x": 245,
+      "y": 180,
+      "w": 100,
+      "h": 42,
+      "ports": [
+        {
+          "pin": "1",
+          "label": "1",
+          "x": 0,
+          "y": 21,
+          "side": "left",
+          "status": "verified"
+        },
+        {
+          "pin": "2",
+          "label": "2",
+          "x": 100,
+          "y": 21,
+          "side": "right",
+          "status": "verified"
+        }
+      ],
+      "package": "5×20 мм, изолированный держатель",
+      "note": "У начала защищаемого проводника. Номинал предохранителя не является точным ограничением рабочего тока."
+    },
+    "SW1": {
+      "kind": "switch",
+      "name": "Выключатель питания",
+      "x": 410,
+      "y": 160,
+      "w": 100,
+      "h": 80,
+      "ports": [
+        {
+          "pin": "1",
+          "label": "1",
+          "x": 0,
+          "y": 55,
+          "side": "left",
+          "status": "verified"
+        },
+        {
+          "pin": "2",
+          "label": "2",
+          "x": 100,
+          "y": 55,
+          "side": "right",
+          "status": "verified"
+        }
+      ],
+      "package": "SPST, ≥5 А при ≥5 В DC",
+      "note": "Внешний блок 5 В / 4 А подключается к J1. Работать с проводкой только при снятом питании.",
+      "caption": "SW1 · Питание"
+    },
+    "Q1": {
+      "kind": "so8",
+      "name": "IRF7416 · адаптер SO8",
+      "x": 610,
+      "y": 150,
+      "w": 130,
+      "h": 115,
+      "ports": [
+        {
+          "pin": "1",
+          "label": "S",
+          "x": 0,
+          "y": 25,
+          "side": "left",
+          "status": "verified",
+          "labelSide": "right",
+          "short": "1 S"
+        },
+        {
+          "pin": "2",
+          "label": "S",
+          "x": 0,
+          "y": 47,
+          "side": "left",
+          "status": "verified",
+          "labelSide": "right",
+          "short": "2 S"
+        },
+        {
+          "pin": "3",
+          "label": "S",
+          "x": 0,
+          "y": 69,
+          "side": "left",
+          "status": "verified",
+          "labelSide": "right",
+          "short": "3 S"
+        },
+        {
+          "pin": "4",
+          "label": "G",
+          "x": 0,
+          "y": 91,
+          "side": "left",
+          "status": "verified",
+          "labelSide": "right",
+          "short": "4 G"
+        },
+        {
+          "pin": "5",
+          "label": "D",
+          "x": 130,
+          "y": 91,
+          "side": "right",
+          "status": "verified",
+          "labelSide": "left",
+          "short": "5 D"
+        },
+        {
+          "pin": "6",
+          "label": "D",
+          "x": 130,
+          "y": 69,
+          "side": "right",
+          "status": "verified",
+          "labelSide": "left",
+          "short": "6 D"
+        },
+        {
+          "pin": "7",
+          "label": "D",
+          "x": 130,
+          "y": 47,
+          "side": "right",
+          "status": "verified",
+          "labelSide": "left",
+          "short": "7 D"
+        },
+        {
+          "pin": "8",
+          "label": "D",
+          "x": 130,
+          "y": 25,
+          "side": "right",
+          "status": "verified",
+          "labelSide": "left",
+          "short": "8 D"
+        }
+      ],
+      "package": "SO8 на монтажном адаптере",
+      "orientation": "Вид сверху. Метка вывода 1 слева вверху. 1–3=S; 4=G; 5–8=D.",
+      "note": "Защита от переполюсовки: D — вход, S — нагрузка, G через R6 на GND. Адаптеру нужен теплоотвод; силовые дорожки проверить."
+    },
+    "R6": {
+      "kind": "resistor",
+      "name": "100 кОм",
+      "x": 810,
+      "y": 200,
+      "w": 100,
+      "h": 38,
+      "ports": [
+        {
+          "pin": "1",
+          "label": "1",
+          "x": 0,
+          "y": 19,
+          "side": "left",
+          "status": "verified"
+        },
+        {
+          "pin": "2",
+          "label": "2",
+          "x": 100,
+          "y": 19,
+          "side": "right",
+          "status": "verified"
+        }
+      ],
+      "package": "Axial THT, 0,25 Вт",
+      "note": "Соединять по сети из KiCad. Полярности нет."
+    },
+    "C8": {
+      "kind": "capacitor",
+      "name": "1000 мкФ / 10 В",
+      "x": 1020,
+      "y": 155,
+      "w": 70,
+      "h": 100,
+      "ports": [
+        {
+          "pin": "1",
+          "label": "+",
+          "x": 20,
+          "y": 100,
+          "side": "bottom",
+          "status": "verified"
+        },
+        {
+          "pin": "2",
+          "label": "−",
+          "x": 50,
+          "y": 100,
+          "side": "bottom",
+          "status": "verified"
+        }
+      ],
+      "package": "Радиальный электролит, не менее 10 В",
+      "note": "1 — положительный вывод, 2 — отрицательный. Полоса на корпусе обозначает минус. Рисунок корпуса условный; маркировку проверить.",
+      "caption": "C8 · 1000 мкФ"
+    },
+    "F2": {
+      "kind": "fuse",
+      "name": "T1A",
+      "x": 170,
+      "y": 405,
+      "w": 100,
+      "h": 42,
+      "ports": [
+        {
+          "pin": "1",
+          "label": "1",
+          "x": 0,
+          "y": 21,
+          "side": "left",
+          "status": "verified"
+        },
+        {
+          "pin": "2",
+          "label": "2",
+          "x": 100,
+          "y": 21,
+          "side": "right",
+          "status": "verified"
+        }
+      ],
+      "package": "5×20 мм, изолированный держатель",
+      "note": "У начала защищаемого проводника. Номинал предохранителя не является точным ограничением рабочего тока."
+    },
+    "J2": {
+      "kind": "connector",
+      "name": "3-контактный разъём",
+      "x": 80,
+      "y": 515,
+      "w": 65,
+      "h": 80,
+      "ports": [
+        {
+          "pin": "1",
+          "label": "+5V",
+          "x": 0,
+          "y": 20,
+          "side": "left",
+          "status": "assumed",
+          "short": "1"
+        },
+        {
+          "pin": "2",
+          "label": "GND",
+          "x": 0,
+          "y": 44,
+          "side": "left",
+          "status": "assumed",
+          "short": "2"
+        },
+        {
+          "pin": "3",
+          "label": "DATA",
+          "x": 0,
+          "y": 68,
+          "side": "left",
+          "status": "assumed",
+          "short": "3"
+        }
+      ],
+      "package": "Клеммник / поляризованная кабельная пара",
+      "assumption": "Нумерация нашего жгута. Физический порядок выбранного разъёма и вид с сопрягаемой стороны проверить по чертежу и прозвонкой.",
+      "assumptionLabel": "нумерация жгута",
+      "note": "J1: ≥5 А на контакт. J2–J7: ≥2 А на контакт. Штатную раскладку площадок LED не угадывать по цвету проводов.",
+      "caption": "J2 · ESP32"
+    },
+    "A1": {
+      "kind": "esp32",
+      "name": "ESP32 DevKitC V4",
+      "x": 80,
+      "y": 740,
+      "w": 160,
+      "h": 250,
+      "ports": [
+        {
+          "pin": "J2.19",
+          "label": "5V",
+          "x": 8,
+          "y": 204,
+          "side": "left",
+          "status": "assumed"
+        },
+        {
+          "pin": "J2.14",
+          "label": "GND",
+          "x": 8,
+          "y": 154,
+          "side": "left",
+          "status": "assumed"
+        },
+        {
+          "pin": "J3.9",
+          "label": "GPIO18",
+          "x": 152,
+          "y": 104,
+          "side": "right",
+          "status": "assumed"
+        }
+      ],
+      "package": "Готовая плата / WROOM-32E",
+      "assumption": "Предполагается Espressif DevKitC V4. Положение используемых контактов показано для принятой платы; сверить с вашей моделью.",
+      "assumptionLabel": "принята плата DevKitC V4",
+      "note": "Показаны 3 используемых контакта. Остальные площадки — только изображение платы, к ним провода не назначены. Перед USB отключить внешний БП и весь жгут J2.",
+      "caption": "A1 · ESP32 DevKitC V4"
+    },
+    "U1": {
+      "kind": "dip",
+      "name": "SN74AHCT125N",
+      "x": 330,
+      "y": 760,
+      "w": 140,
+      "h": 215,
+      "ports": [
+        {
+          "pin": "1",
+          "label": "/1OE",
+          "x": 0,
+          "y": 24,
+          "side": "left",
+          "status": "verified",
+          "short": "1 /1OE",
+          "labelSide": "right"
+        },
+        {
+          "pin": "2",
+          "label": "1A",
+          "x": 0,
+          "y": 51,
+          "side": "left",
+          "status": "verified",
+          "short": "2 1A",
+          "labelSide": "right"
+        },
+        {
+          "pin": "3",
+          "label": "1Y",
+          "x": 0,
+          "y": 78,
+          "side": "left",
+          "status": "verified",
+          "short": "3 1Y",
+          "labelSide": "right"
+        },
+        {
+          "pin": "4",
+          "label": "/2OE",
+          "x": 0,
+          "y": 105,
+          "side": "left",
+          "status": "verified",
+          "short": "4 /2OE",
+          "labelSide": "right"
+        },
+        {
+          "pin": "5",
+          "label": "2A",
+          "x": 0,
+          "y": 132,
+          "side": "left",
+          "status": "verified",
+          "short": "5 2A",
+          "labelSide": "right"
+        },
+        {
+          "pin": "6",
+          "label": "2Y",
+          "x": 0,
+          "y": 159,
+          "side": "left",
+          "status": "verified",
+          "short": "6 2Y",
+          "labelSide": "right"
+        },
+        {
+          "pin": "7",
+          "label": "GND",
+          "x": 0,
+          "y": 186,
+          "side": "left",
+          "status": "verified",
+          "short": "7 GND",
+          "labelSide": "right"
+        },
+        {
+          "pin": "14",
+          "label": "VCC",
+          "x": 140,
+          "y": 24,
+          "side": "right",
+          "status": "verified",
+          "short": "14 VCC",
+          "labelSide": "left"
+        },
+        {
+          "pin": "13",
+          "label": "/4OE",
+          "x": 140,
+          "y": 51,
+          "side": "right",
+          "status": "verified",
+          "short": "13 /4OE",
+          "labelSide": "left"
+        },
+        {
+          "pin": "12",
+          "label": "4A",
+          "x": 140,
+          "y": 78,
+          "side": "right",
+          "status": "verified",
+          "short": "12 4A",
+          "labelSide": "left"
+        },
+        {
+          "pin": "11",
+          "label": "4Y",
+          "x": 140,
+          "y": 105,
+          "side": "right",
+          "status": "verified",
+          "short": "11 4Y",
+          "labelSide": "left"
+        },
+        {
+          "pin": "10",
+          "label": "/3OE",
+          "x": 140,
+          "y": 132,
+          "side": "right",
+          "status": "verified",
+          "short": "10 /3OE",
+          "labelSide": "left"
+        },
+        {
+          "pin": "9",
+          "label": "3A",
+          "x": 140,
+          "y": 159,
+          "side": "right",
+          "status": "verified",
+          "short": "9 3A",
+          "labelSide": "left"
+        },
+        {
+          "pin": "8",
+          "label": "3Y",
+          "x": 140,
+          "y": 186,
+          "side": "right",
+          "status": "verified",
+          "short": "8 3Y",
+          "labelSide": "left"
+        }
+      ],
+      "package": "PDIP-14, панелька 2,54 мм / 7,62 мм",
+      "orientation": "Вид сверху. Выемка сверху, вывод 1 слева вверху. Не зеркалить для пайки.",
+      "note": "Питание 14/7: 4,5–5,5 В. GPIO18 → 2; 3 → R1. Неиспользуемые выходы 6/8/11 — NC. Использовать именно AHCT, не HC и не LS."
+    },
+    "C1": {
+      "kind": "ceramic",
+      "name": "100 нФ",
+      "x": 285,
+      "y": 590,
+      "w": 60,
+      "h": 60,
+      "ports": [
+        {
+          "pin": "1",
+          "label": "1",
+          "x": 16,
+          "y": 60,
+          "side": "bottom",
+          "status": "verified"
+        },
+        {
+          "pin": "2",
+          "label": "2",
+          "x": 44,
+          "y": 60,
+          "side": "bottom",
+          "status": "verified"
+        }
+      ],
+      "package": "Керамический THT",
+      "note": "Неполярный. C1 размещать вплотную к выводам 14 и 7 U1.",
+      "caption": "C1 · 100 нФ"
+    },
+    "C2": {
+      "kind": "capacitor",
+      "name": "10 мкФ / 10 В",
+      "x": 420,
+      "y": 550,
+      "w": 70,
+      "h": 100,
+      "ports": [
+        {
+          "pin": "1",
+          "label": "+",
+          "x": 20,
+          "y": 100,
+          "side": "bottom",
+          "status": "verified"
+        },
+        {
+          "pin": "2",
+          "label": "−",
+          "x": 50,
+          "y": 100,
+          "side": "bottom",
+          "status": "verified"
+        }
+      ],
+      "package": "Радиальный электролит, не менее 10 В",
+      "note": "1 — положительный вывод, 2 — отрицательный. Полоса на корпусе обозначает минус. Рисунок корпуса условный; маркировку проверить.",
+      "caption": "C2 · 10 мкФ"
+    },
+    "R7": {
+      "kind": "resistor",
+      "name": "10 кОм",
+      "x": 150,
+      "y": 1080,
+      "w": 100,
+      "h": 38,
+      "ports": [
+        {
+          "pin": "1",
+          "label": "1",
+          "x": 0,
+          "y": 19,
+          "side": "left",
+          "status": "verified"
+        },
+        {
+          "pin": "2",
+          "label": "2",
+          "x": 100,
+          "y": 19,
+          "side": "right",
+          "status": "verified"
+        }
+      ],
+      "package": "Axial THT, 0,25 Вт",
+      "note": "Соединять по сети из KiCad. Полярности нет."
+    },
+    "M1": {
+      "kind": "matrix",
+      "name": "Матрица 1 · WS2812B",
+      "x": 740,
+      "y": 520,
+      "w": 180,
+      "h": 190,
+      "ports": [
+        {
+          "pin": "V+",
+          "label": "+5V",
+          "x": 25,
+          "y": 184,
+          "side": "bottom",
+          "status": "assumed",
+          "short": "+5?"
+        },
+        {
+          "pin": "GND",
+          "label": "GND",
+          "x": 68,
+          "y": 184,
+          "side": "bottom",
+          "status": "assumed",
+          "short": "GND?"
+        },
+        {
+          "pin": "DIN",
+          "label": "DIN",
+          "x": 111,
+          "y": 184,
+          "side": "bottom",
+          "status": "assumed",
+          "short": "DIN?"
+        },
+        {
+          "pin": "DOUT",
+          "label": "DOUT",
+          "x": 154,
+          "y": 184,
+          "side": "bottom",
+          "status": "assumed",
+          "short": "OUT?"
+        }
+      ],
+      "package": "Готовый модуль 8×8 / 64 LED",
+      "assumption": "Модель и порядок площадок неизвестны. Площадки на рисунке расположены условно. Подключать только по фактическим надписям +5V, GND, DIN и DOUT.",
+      "assumptionLabel": "площадки условные",
+      "note": "Рабочий бюджет ≤0,60 А. Питание отдельной парой от распределителя. Конденсатор рядом с модулем.",
+      "caption": "M1 · Матрица 8×8"
+    },
+    "J3": {
+      "kind": "connector",
+      "name": "4-контактный разъём",
+      "x": 570,
+      "y": 540,
+      "w": 65,
+      "h": 104,
+      "ports": [
+        {
+          "pin": "1",
+          "label": "+5V",
+          "x": 0,
+          "y": 20,
+          "side": "left",
+          "status": "assumed",
+          "short": "1"
+        },
+        {
+          "pin": "2",
+          "label": "GND",
+          "x": 0,
+          "y": 44,
+          "side": "left",
+          "status": "assumed",
+          "short": "2"
+        },
+        {
+          "pin": "3",
+          "label": "DIN",
+          "x": 0,
+          "y": 68,
+          "side": "left",
+          "status": "assumed",
+          "short": "3"
+        },
+        {
+          "pin": "4",
+          "label": "DOUT",
+          "x": 0,
+          "y": 92,
+          "side": "left",
+          "status": "assumed",
+          "short": "4"
+        }
+      ],
+      "package": "Клеммник / поляризованная кабельная пара",
+      "assumption": "Нумерация нашего жгута. Физический порядок выбранного разъёма и вид с сопрягаемой стороны проверить по чертежу и прозвонкой.",
+      "assumptionLabel": "нумерация жгута",
+      "note": "J1: ≥5 А на контакт. J2–J7: ≥2 А на контакт. Штатную раскладку площадок LED не угадывать по цвету проводов.",
+      "caption": "J3 · LED1"
+    },
+    "F3": {
+      "kind": "fuse",
+      "name": "T1A",
+      "x": 590,
+      "y": 400,
+      "w": 100,
+      "h": 42,
+      "ports": [
+        {
+          "pin": "1",
+          "label": "1",
+          "x": 0,
+          "y": 21,
+          "side": "left",
+          "status": "verified"
+        },
+        {
+          "pin": "2",
+          "label": "2",
+          "x": 100,
+          "y": 21,
+          "side": "right",
+          "status": "verified"
+        }
+      ],
+      "package": "5×20 мм, изолированный держатель",
+      "note": "У начала защищаемого проводника. Номинал предохранителя не является точным ограничением рабочего тока."
+    },
+    "C3": {
+      "kind": "capacitor",
+      "name": "470 мкФ / 10 В",
+      "x": 950,
+      "y": 540,
+      "w": 70,
+      "h": 100,
+      "ports": [
+        {
+          "pin": "1",
+          "label": "+",
+          "x": 20,
+          "y": 100,
+          "side": "bottom",
+          "status": "verified"
+        },
+        {
+          "pin": "2",
+          "label": "−",
+          "x": 50,
+          "y": 100,
+          "side": "bottom",
+          "status": "verified"
+        }
+      ],
+      "package": "Радиальный электролит, не менее 10 В",
+      "note": "1 — положительный вывод, 2 — отрицательный. Полоса на корпусе обозначает минус. Рисунок корпуса условный; маркировку проверить.",
+      "caption": "C3 · 470 мкФ"
+    },
+    "M2": {
+      "kind": "matrix",
+      "name": "Матрица 2 · WS2812B",
+      "x": 1280,
+      "y": 520,
+      "w": 180,
+      "h": 190,
+      "ports": [
+        {
+          "pin": "V+",
+          "label": "+5V",
+          "x": 25,
+          "y": 184,
+          "side": "bottom",
+          "status": "assumed",
+          "short": "+5?"
+        },
+        {
+          "pin": "GND",
+          "label": "GND",
+          "x": 68,
+          "y": 184,
+          "side": "bottom",
+          "status": "assumed",
+          "short": "GND?"
+        },
+        {
+          "pin": "DIN",
+          "label": "DIN",
+          "x": 111,
+          "y": 184,
+          "side": "bottom",
+          "status": "assumed",
+          "short": "DIN?"
+        },
+        {
+          "pin": "DOUT",
+          "label": "DOUT",
+          "x": 154,
+          "y": 184,
+          "side": "bottom",
+          "status": "assumed",
+          "short": "OUT?"
+        }
+      ],
+      "package": "Готовый модуль 8×8 / 64 LED",
+      "assumption": "Модель и порядок площадок неизвестны. Площадки на рисунке расположены условно. Подключать только по фактическим надписям +5V, GND, DIN и DOUT.",
+      "assumptionLabel": "площадки условные",
+      "note": "Рабочий бюджет ≤0,60 А. Питание отдельной парой от распределителя. Конденсатор рядом с модулем.",
+      "caption": "M2 · Матрица 8×8"
+    },
+    "J4": {
+      "kind": "connector",
+      "name": "4-контактный разъём",
+      "x": 1100,
+      "y": 540,
+      "w": 65,
+      "h": 104,
+      "ports": [
+        {
+          "pin": "1",
+          "label": "+5V",
+          "x": 0,
+          "y": 20,
+          "side": "left",
+          "status": "assumed",
+          "short": "1"
+        },
+        {
+          "pin": "2",
+          "label": "GND",
+          "x": 0,
+          "y": 44,
+          "side": "left",
+          "status": "assumed",
+          "short": "2"
+        },
+        {
+          "pin": "3",
+          "label": "DIN",
+          "x": 0,
+          "y": 68,
+          "side": "left",
+          "status": "assumed",
+          "short": "3"
+        },
+        {
+          "pin": "4",
+          "label": "DOUT",
+          "x": 0,
+          "y": 92,
+          "side": "left",
+          "status": "assumed",
+          "short": "4"
+        }
+      ],
+      "package": "Клеммник / поляризованная кабельная пара",
+      "assumption": "Нумерация нашего жгута. Физический порядок выбранного разъёма и вид с сопрягаемой стороны проверить по чертежу и прозвонкой.",
+      "assumptionLabel": "нумерация жгута",
+      "note": "J1: ≥5 А на контакт. J2–J7: ≥2 А на контакт. Штатную раскладку площадок LED не угадывать по цвету проводов.",
+      "caption": "J4 · LED2"
+    },
+    "F4": {
+      "kind": "fuse",
+      "name": "T1A",
+      "x": 1140,
+      "y": 400,
+      "w": 100,
+      "h": 42,
+      "ports": [
+        {
+          "pin": "1",
+          "label": "1",
+          "x": 0,
+          "y": 21,
+          "side": "left",
+          "status": "verified"
+        },
+        {
+          "pin": "2",
+          "label": "2",
+          "x": 100,
+          "y": 21,
+          "side": "right",
+          "status": "verified"
+        }
+      ],
+      "package": "5×20 мм, изолированный держатель",
+      "note": "У начала защищаемого проводника. Номинал предохранителя не является точным ограничением рабочего тока."
+    },
+    "C4": {
+      "kind": "capacitor",
+      "name": "470 мкФ / 10 В",
+      "x": 1510,
+      "y": 540,
+      "w": 70,
+      "h": 100,
+      "ports": [
+        {
+          "pin": "1",
+          "label": "+",
+          "x": 20,
+          "y": 100,
+          "side": "bottom",
+          "status": "verified"
+        },
+        {
+          "pin": "2",
+          "label": "−",
+          "x": 50,
+          "y": 100,
+          "side": "bottom",
+          "status": "verified"
+        }
+      ],
+      "package": "Радиальный электролит, не менее 10 В",
+      "note": "1 — положительный вывод, 2 — отрицательный. Полоса на корпусе обозначает минус. Рисунок корпуса условный; маркировку проверить.",
+      "caption": "C4 · 470 мкФ"
+    },
+    "M3": {
+      "kind": "matrix",
+      "name": "Матрица 3 · WS2812B",
+      "x": 740,
+      "y": 950,
+      "w": 180,
+      "h": 190,
+      "ports": [
+        {
+          "pin": "V+",
+          "label": "+5V",
+          "x": 25,
+          "y": 184,
+          "side": "bottom",
+          "status": "assumed",
+          "short": "+5?"
+        },
+        {
+          "pin": "GND",
+          "label": "GND",
+          "x": 68,
+          "y": 184,
+          "side": "bottom",
+          "status": "assumed",
+          "short": "GND?"
+        },
+        {
+          "pin": "DIN",
+          "label": "DIN",
+          "x": 111,
+          "y": 184,
+          "side": "bottom",
+          "status": "assumed",
+          "short": "DIN?"
+        },
+        {
+          "pin": "DOUT",
+          "label": "DOUT",
+          "x": 154,
+          "y": 184,
+          "side": "bottom",
+          "status": "assumed",
+          "short": "OUT?"
+        }
+      ],
+      "package": "Готовый модуль 8×8 / 64 LED",
+      "assumption": "Модель и порядок площадок неизвестны. Площадки на рисунке расположены условно. Подключать только по фактическим надписям +5V, GND, DIN и DOUT.",
+      "assumptionLabel": "площадки условные",
+      "note": "Рабочий бюджет ≤0,60 А. Питание отдельной парой от распределителя. Конденсатор рядом с модулем.",
+      "caption": "M3 · Матрица 8×8"
+    },
+    "J5": {
+      "kind": "connector",
+      "name": "4-контактный разъём",
+      "x": 570,
+      "y": 970,
+      "w": 65,
+      "h": 104,
+      "ports": [
+        {
+          "pin": "1",
+          "label": "+5V",
+          "x": 0,
+          "y": 20,
+          "side": "left",
+          "status": "assumed",
+          "short": "1"
+        },
+        {
+          "pin": "2",
+          "label": "GND",
+          "x": 0,
+          "y": 44,
+          "side": "left",
+          "status": "assumed",
+          "short": "2"
+        },
+        {
+          "pin": "3",
+          "label": "DIN",
+          "x": 0,
+          "y": 68,
+          "side": "left",
+          "status": "assumed",
+          "short": "3"
+        },
+        {
+          "pin": "4",
+          "label": "DOUT",
+          "x": 0,
+          "y": 92,
+          "side": "left",
+          "status": "assumed",
+          "short": "4"
+        }
+      ],
+      "package": "Клеммник / поляризованная кабельная пара",
+      "assumption": "Нумерация нашего жгута. Физический порядок выбранного разъёма и вид с сопрягаемой стороны проверить по чертежу и прозвонкой.",
+      "assumptionLabel": "нумерация жгута",
+      "note": "J1: ≥5 А на контакт. J2–J7: ≥2 А на контакт. Штатную раскладку площадок LED не угадывать по цвету проводов.",
+      "caption": "J5 · LED3"
+    },
+    "F5": {
+      "kind": "fuse",
+      "name": "T1A",
+      "x": 590,
+      "y": 830,
+      "w": 100,
+      "h": 42,
+      "ports": [
+        {
+          "pin": "1",
+          "label": "1",
+          "x": 0,
+          "y": 21,
+          "side": "left",
+          "status": "verified"
+        },
+        {
+          "pin": "2",
+          "label": "2",
+          "x": 100,
+          "y": 21,
+          "side": "right",
+          "status": "verified"
+        }
+      ],
+      "package": "5×20 мм, изолированный держатель",
+      "note": "У начала защищаемого проводника. Номинал предохранителя не является точным ограничением рабочего тока."
+    },
+    "C5": {
+      "kind": "capacitor",
+      "name": "470 мкФ / 10 В",
+      "x": 950,
+      "y": 970,
+      "w": 70,
+      "h": 100,
+      "ports": [
+        {
+          "pin": "1",
+          "label": "+",
+          "x": 20,
+          "y": 100,
+          "side": "bottom",
+          "status": "verified"
+        },
+        {
+          "pin": "2",
+          "label": "−",
+          "x": 50,
+          "y": 100,
+          "side": "bottom",
+          "status": "verified"
+        }
+      ],
+      "package": "Радиальный электролит, не менее 10 В",
+      "note": "1 — положительный вывод, 2 — отрицательный. Полоса на корпусе обозначает минус. Рисунок корпуса условный; маркировку проверить.",
+      "caption": "C5 · 470 мкФ"
+    },
+    "M4": {
+      "kind": "matrix",
+      "name": "Матрица 4 · WS2812B",
+      "x": 1280,
+      "y": 950,
+      "w": 180,
+      "h": 190,
+      "ports": [
+        {
+          "pin": "V+",
+          "label": "+5V",
+          "x": 25,
+          "y": 184,
+          "side": "bottom",
+          "status": "assumed",
+          "short": "+5?"
+        },
+        {
+          "pin": "GND",
+          "label": "GND",
+          "x": 68,
+          "y": 184,
+          "side": "bottom",
+          "status": "assumed",
+          "short": "GND?"
+        },
+        {
+          "pin": "DIN",
+          "label": "DIN",
+          "x": 111,
+          "y": 184,
+          "side": "bottom",
+          "status": "assumed",
+          "short": "DIN?"
+        },
+        {
+          "pin": "DOUT",
+          "label": "DOUT",
+          "x": 154,
+          "y": 184,
+          "side": "bottom",
+          "status": "assumed",
+          "short": "OUT?"
+        }
+      ],
+      "package": "Готовый модуль 8×8 / 64 LED",
+      "assumption": "Модель и порядок площадок неизвестны. Площадки на рисунке расположены условно. Подключать только по фактическим надписям +5V, GND, DIN и DOUT.",
+      "assumptionLabel": "площадки условные",
+      "note": "Рабочий бюджет ≤0,60 А. Питание отдельной парой от распределителя. Конденсатор рядом с модулем.",
+      "caption": "M4 · Матрица 8×8"
+    },
+    "J6": {
+      "kind": "connector",
+      "name": "4-контактный разъём",
+      "x": 1100,
+      "y": 970,
+      "w": 65,
+      "h": 104,
+      "ports": [
+        {
+          "pin": "1",
+          "label": "+5V",
+          "x": 0,
+          "y": 20,
+          "side": "left",
+          "status": "assumed",
+          "short": "1"
+        },
+        {
+          "pin": "2",
+          "label": "GND",
+          "x": 0,
+          "y": 44,
+          "side": "left",
+          "status": "assumed",
+          "short": "2"
+        },
+        {
+          "pin": "3",
+          "label": "DIN",
+          "x": 0,
+          "y": 68,
+          "side": "left",
+          "status": "assumed",
+          "short": "3"
+        },
+        {
+          "pin": "4",
+          "label": "DOUT",
+          "x": 0,
+          "y": 92,
+          "side": "left",
+          "status": "assumed",
+          "short": "4"
+        }
+      ],
+      "package": "Клеммник / поляризованная кабельная пара",
+      "assumption": "Нумерация нашего жгута. Физический порядок выбранного разъёма и вид с сопрягаемой стороны проверить по чертежу и прозвонкой.",
+      "assumptionLabel": "нумерация жгута",
+      "note": "J1: ≥5 А на контакт. J2–J7: ≥2 А на контакт. Штатную раскладку площадок LED не угадывать по цвету проводов.",
+      "caption": "J6 · LED4"
+    },
+    "F6": {
+      "kind": "fuse",
+      "name": "T1A",
+      "x": 1140,
+      "y": 830,
+      "w": 100,
+      "h": 42,
+      "ports": [
+        {
+          "pin": "1",
+          "label": "1",
+          "x": 0,
+          "y": 21,
+          "side": "left",
+          "status": "verified"
+        },
+        {
+          "pin": "2",
+          "label": "2",
+          "x": 100,
+          "y": 21,
+          "side": "right",
+          "status": "verified"
+        }
+      ],
+      "package": "5×20 мм, изолированный держатель",
+      "note": "У начала защищаемого проводника. Номинал предохранителя не является точным ограничением рабочего тока."
+    },
+    "C6": {
+      "kind": "capacitor",
+      "name": "470 мкФ / 10 В",
+      "x": 1510,
+      "y": 970,
+      "w": 70,
+      "h": 100,
+      "ports": [
+        {
+          "pin": "1",
+          "label": "+",
+          "x": 20,
+          "y": 100,
+          "side": "bottom",
+          "status": "verified"
+        },
+        {
+          "pin": "2",
+          "label": "−",
+          "x": 50,
+          "y": 100,
+          "side": "bottom",
+          "status": "verified"
+        }
+      ],
+      "package": "Радиальный электролит, не менее 10 В",
+      "note": "1 — положительный вывод, 2 — отрицательный. Полоса на корпусе обозначает минус. Рисунок корпуса условный; маркировку проверить.",
+      "caption": "C6 · 470 мкФ"
+    },
+    "R1": {
+      "kind": "resistor",
+      "name": "330 Ом",
+      "x": 570,
+      "y": 710,
+      "w": 100,
+      "h": 38,
+      "ports": [
+        {
+          "pin": "1",
+          "label": "1",
+          "x": 0,
+          "y": 19,
+          "side": "left",
+          "status": "verified"
+        },
+        {
+          "pin": "2",
+          "label": "2",
+          "x": 100,
+          "y": 19,
+          "side": "right",
+          "status": "verified"
+        }
+      ],
+      "package": "Axial THT, 0,25 Вт",
+      "note": "Соединять по сети из KiCad. Полярности нет."
+    },
+    "R2": {
+      "kind": "resistor",
+      "name": "330 Ом",
+      "x": 1010,
+      "y": 720,
+      "w": 100,
+      "h": 38,
+      "ports": [
+        {
+          "pin": "1",
+          "label": "1",
+          "x": 0,
+          "y": 19,
+          "side": "left",
+          "status": "verified"
+        },
+        {
+          "pin": "2",
+          "label": "2",
+          "x": 100,
+          "y": 19,
+          "side": "right",
+          "status": "verified"
+        }
+      ],
+      "package": "Axial THT, 0,25 Вт",
+      "note": "Соединять по сети из KiCad. Полярности нет."
+    },
+    "R3": {
+      "kind": "resistor",
+      "name": "330 Ом",
+      "x": 1010,
+      "y": 840,
+      "w": 100,
+      "h": 38,
+      "ports": [
+        {
+          "pin": "1",
+          "label": "1",
+          "x": 0,
+          "y": 19,
+          "side": "left",
+          "status": "verified"
+        },
+        {
+          "pin": "2",
+          "label": "2",
+          "x": 100,
+          "y": 19,
+          "side": "right",
+          "status": "verified"
+        }
+      ],
+      "package": "Axial THT, 0,25 Вт",
+      "note": "Соединять по сети из KiCad. Полярности нет."
+    },
+    "R4": {
+      "kind": "resistor",
+      "name": "330 Ом",
+      "x": 1010,
+      "y": 1150,
+      "w": 100,
+      "h": 38,
+      "ports": [
+        {
+          "pin": "1",
+          "label": "1",
+          "x": 0,
+          "y": 19,
+          "side": "left",
+          "status": "verified"
+        },
+        {
+          "pin": "2",
+          "label": "2",
+          "x": 100,
+          "y": 19,
+          "side": "right",
+          "status": "verified"
+        }
+      ],
+      "package": "Axial THT, 0,25 Вт",
+      "note": "Соединять по сети из KiCad. Полярности нет."
+    },
+    "R5": {
+      "kind": "resistor",
+      "name": "330 Ом",
+      "x": 1500,
+      "y": 1160,
+      "w": 100,
+      "h": 38,
+      "ports": [
+        {
+          "pin": "1",
+          "label": "1",
+          "x": 0,
+          "y": 19,
+          "side": "left",
+          "status": "verified"
+        },
+        {
+          "pin": "2",
+          "label": "2",
+          "x": 100,
+          "y": 19,
+          "side": "right",
+          "status": "verified"
+        }
+      ],
+      "package": "Axial THT, 0,25 Вт",
+      "note": "Соединять по сети из KiCad. Полярности нет."
+    },
+    "M5": {
+      "kind": "strip",
+      "name": "Лента WS2812B · 60 LED",
+      "x": 650,
+      "y": 1390,
+      "w": 520,
+      "h": 75,
+      "ports": [
+        {
+          "pin": "V+",
+          "label": "+5V",
+          "x": 8,
+          "y": 12,
+          "side": "left",
+          "status": "assumed",
+          "short": "+5?"
+        },
+        {
+          "pin": "GND",
+          "label": "GND",
+          "x": 8,
+          "y": 38,
+          "side": "left",
+          "status": "assumed",
+          "short": "GND?"
+        },
+        {
+          "pin": "DIN",
+          "label": "DIN",
+          "x": 8,
+          "y": 64,
+          "side": "left",
+          "status": "assumed",
+          "short": "DIN?"
+        },
+        {
+          "pin": "DOUT",
+          "label": "DOUT",
+          "x": 512,
+          "y": 38,
+          "side": "right",
+          "status": "assumed",
+          "short": "OUT?"
+        }
+      ],
+      "package": "Готовая лента 5 В / 60 LED",
+      "assumption": "Порядок площадок и размещение DOUT на рисунке условные. Проверить маркировку и стрелки реальной ленты.",
+      "assumptionLabel": "площадки и размеры условные",
+      "note": "Бюджет ≤0,60 А. DOUT5 оставлен запасным на J7.4; изолировать. Рисунок показывает фрагмент, а не все 60 LED."
+    },
+    "J7": {
+      "kind": "connector",
+      "name": "4-контактный разъём",
+      "x": 1300,
+      "y": 1340,
+      "w": 65,
+      "h": 104,
+      "ports": [
+        {
+          "pin": "1",
+          "label": "+5V",
+          "x": 0,
+          "y": 20,
+          "side": "left",
+          "status": "assumed",
+          "short": "1"
+        },
+        {
+          "pin": "2",
+          "label": "GND",
+          "x": 0,
+          "y": 44,
+          "side": "left",
+          "status": "assumed",
+          "short": "2"
+        },
+        {
+          "pin": "3",
+          "label": "DIN",
+          "x": 0,
+          "y": 68,
+          "side": "left",
+          "status": "assumed",
+          "short": "3"
+        },
+        {
+          "pin": "4",
+          "label": "DOUT",
+          "x": 0,
+          "y": 92,
+          "side": "left",
+          "status": "assumed",
+          "short": "4"
+        }
+      ],
+      "package": "Клеммник / поляризованная кабельная пара",
+      "assumption": "Нумерация нашего жгута. Физический порядок выбранного разъёма и вид с сопрягаемой стороны проверить по чертежу и прозвонкой.",
+      "assumptionLabel": "нумерация жгута",
+      "note": "J1: ≥5 А на контакт. J2–J7: ≥2 А на контакт. Штатную раскладку площадок LED не угадывать по цвету проводов.",
+      "caption": "J7 · LED5"
+    },
+    "F7": {
+      "kind": "fuse",
+      "name": "T1A",
+      "x": 1450,
+      "y": 1290,
+      "w": 100,
+      "h": 42,
+      "ports": [
+        {
+          "pin": "1",
+          "label": "1",
+          "x": 0,
+          "y": 21,
+          "side": "left",
+          "status": "verified"
+        },
+        {
+          "pin": "2",
+          "label": "2",
+          "x": 100,
+          "y": 21,
+          "side": "right",
+          "status": "verified"
+        }
+      ],
+      "package": "5×20 мм, изолированный держатель",
+      "note": "У начала защищаемого проводника. Номинал предохранителя не является точным ограничением рабочего тока."
+    },
+    "C7": {
+      "kind": "capacitor",
+      "name": "470 мкФ / 10 В",
+      "x": 1510,
+      "y": 1380,
+      "w": 70,
+      "h": 100,
+      "ports": [
+        {
+          "pin": "1",
+          "label": "+",
+          "x": 20,
+          "y": 100,
+          "side": "bottom",
+          "status": "verified"
+        },
+        {
+          "pin": "2",
+          "label": "−",
+          "x": 50,
+          "y": 100,
+          "side": "bottom",
+          "status": "verified"
+        }
+      ],
+      "package": "Радиальный электролит, не менее 10 В",
+      "note": "1 — положительный вывод, 2 — отрицательный. Полоса на корпусе обозначает минус. Рисунок корпуса условный; маркировку проверить.",
+      "caption": "C7 · 470 мкФ"
+    }
+  },
+  "zones": [
+    {
+      "x": 50,
+      "y": 110,
+      "w": 1700,
+      "h": 170,
+      "label": "01  ПИТАНИЕ И ЗАЩИТА · внешний БП подключить к J1"
+    },
+    {
+      "x": 50,
+      "y": 365,
+      "w": 470,
+      "h": 835,
+      "label": "02  КОНТРОЛЛЕР И ПРЕОБРАЗОВАТЕЛЬ"
+    },
+    {
+      "x": 550,
+      "y": 365,
+      "w": 1180,
+      "h": 835,
+      "label": "03  ЧЕТЫРЕ МАТРИЦЫ · данные M1 → M2 → M3 → M4"
+    },
+    {
+      "x": 550,
+      "y": 1260,
+      "w": 1180,
+      "h": 250,
+      "label": "04  ЛЕНТА · данные от M4, DOUT5 свободен"
+    }
+  ],
+  "trunks": {
+    "V5_BUS": {
+      "axis": "h",
+      "at": 320,
+      "from": 60,
+      "to": 1670
+    },
+    "GND": {
+      "axis": "h",
+      "at": 1230,
+      "from": 40,
+      "to": 1710
+    },
+    "V5_CTRL": {
+      "axis": "v",
+      "at": 30,
+      "from": 390,
+      "to": 1130
+    }
+  },
+  "sources": [
+    {
+      "component": "A1",
+      "url": "https://documentation.espressif.com/esp-dev-kits/en/latest/esp32/esp32-devkitc/user_guide.html"
+    },
+    {
+      "component": "U1",
+      "url": "https://www.ti.com/lit/ds/symlink/sn74ahct125.pdf"
+    },
+    {
+      "component": "Q1",
+      "url": "https://www.infineon.com/part/IRF7416"
+    }
+  ],
+  "graphics": "Original vector illustrations; physical positions of unspecified modules and connectors explicitly assumed."
+}
